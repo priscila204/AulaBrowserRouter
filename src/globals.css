@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+carrossel {
+
+
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: calc (33.333% - 20px);
+}
+
+
+
+.produto img {
+ max-width: 100%;
+}
+ /*
+ (max-width:768px) {
+    .produto {
+        width: calc (50% - 20%); 
+    }
+ }
+*/
+
+/*
+ (max-width: 480px) {
+    .produto {
+        width: 100%;
+
+    }
+ }
+ */
