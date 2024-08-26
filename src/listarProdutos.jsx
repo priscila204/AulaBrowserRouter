@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Home() {
+export default function Cardapio() {
     const [listaProdutos, setPtrodutos] = useState([
     { id: 1, nome: 'Produto A', preco: '55.00'},
     { id: 2, nome: 'Produto B', preco: '40.00'},
@@ -18,6 +18,24 @@ const [listaPedidos, setListaPedidos] = useState([]);
 const adicionarItemPedidos = (objeto) => {
     setListaPedidos([...listaPedidos,objeto])
 }
+
+const removerPedido = (id) => {
+    let remover = false;
+    let listaAux = listaPedidos.filter ((produto)=> {
+       if (remover == false){
+         if (produto.id !== id) {
+            return produto
+         } else {
+            remover =  true;
+            return null 
+         }
+       } else {
+            return produto
+       }
+});
+setListaPedidos(listaAux);
+}
+
 return (
     <div>
         <h1>Minha Loja Virtual</h1>
@@ -29,7 +47,16 @@ return (
                 </div>
             ))}
         </div>
+        {
+            listaPedidos.map ((produto)=> 
+            <div key={produto.id}>
+                <p>{produto.nome}</p>
+                 <p> {produto.preco}</p>
+                 <button onClick={()=> removerPedido(produto.id)}>Remover </button>
+            </div>
+            )
+}
         
-    </div>
- );
+        </div>
+    )
 }
