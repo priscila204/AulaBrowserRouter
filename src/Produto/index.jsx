@@ -1,16 +1,7 @@
-import React, { useState} from 'react'
-import ListarProdutos from './ListarProdutos';
-
-const Produtos = () => {
-    const [produtos, setProdutos] = useState([
-        {id: 1, nome: 'produto 1', preco : 50.00 }
-    ])
-}
-
-//componentes
-import { useState } from "react";
-export default function Home() { 
-    const [listaProdutos, setPtrodutos]  =  useState[
+import React, { useState } from 'react';
+import Cardapio from '../Componentes/listarProdutos';
+export default function Produtos() {
+    const [listaProdutos, setProdutos] = useState([
         {
             ID: 1,
             nome: "One Piece",
@@ -34,7 +25,6 @@ export default function Home() {
             cor: "colorido",
             capitulo: 139,
             imagem: "https://mangalivre.com.br/wp-content/uploads/2021/11/Attack-on-Titan-4-GQCA-img-qSKtAl-847x1200.jpeg"
-        
         },
         {
             ID: 4,
@@ -42,8 +32,7 @@ export default function Home() {
             preço: 26.90,
             cor: "colorido",
             capitulo: 386,
-            imagem: "https://www.google.com/url?sa=i&url=https%3A%2F%2Feditorajbc.com.br%2Fmangas%2Fcolecao%2Fmy-hero-academia%2F&psig=AOvVaw1MRkwGQxQzBpSziMR88xf1&ust=1724806066729000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjy8735k4gDFQAAAAAdAAAAABAE"
-
+            imagem: "https://editorajbc.com.br/mangas/colecao/my-hero-academia"
         },
         {
             ID: 5,
@@ -52,7 +41,6 @@ export default function Home() {
             cor: "colorido",
             capitulo: 205,
             imagem: "https://mangalivre.com.br/wp-content/uploads/2021/02/kimetsu-no-yaiba-segunda-temporada-poster-768x1086-2.jpg"
-        
         },
         {
             ID: 6,
@@ -134,6 +122,12 @@ export default function Home() {
             capitulo: 390,
             imagem: "https://m.media-amazon.com/images/I/61NPpt5HC6L._AC_UF1000,1000_QL80_.jpg"
         }
-    ];
-    return
+    ]);
+
+    return (
+        <div>
+            <h1>Minha Loja Virtual</h1>
+            <Cardapio itens={listaProdutos} />
+        </div>
+    );
 }

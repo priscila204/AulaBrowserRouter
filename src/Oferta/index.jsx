@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Cardapio from "../Componentes/listarProdutos";
 export default function Oferta(){ 
     const [listaOferta, setOferta]  =  useState[
         {
@@ -87,6 +88,9 @@ export default function Oferta(){
         }
     ];
     return(
+        <div>
         <hi>Minha Oferta</hi>
+        <Cardapio itens={listaOferta}/>
+        </div>
     )
 }
