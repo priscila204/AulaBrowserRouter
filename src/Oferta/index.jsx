@@ -1,15 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Cardapio from "../Componentes/listarProdutos";
-export default function Oferta(){ 
-    const [listaOferta, setOferta]  =  useState[
+
+export default function Oferta() { 
+    const [listaOferta, setOferta] = useState([
         {
             ID: 1,
             nome: "One Piece",
             preço: 29.90,
             cor: "Colorido",
             capitulo: 1075,
-            imagem: " https://acdn.mitiendanube.com/stores/002/079/231/products/one-piece-3-em-1-vol-121-3e506cd7baddee239d16841849948500-1024-1024.jpg"
-    
+            imagem: "https://acdn.mitiendanube.com/stores/002/079/231/products/one-piece-3-em-1-vol-121-3e506cd7baddee239d16841849948500-1024-1024.jpg"
         },
         {
             ID: 2,
@@ -26,7 +26,6 @@ export default function Oferta(){
             cor: "colorido",
             capitulo: 139,
             imagem: "https://mangalivre.com.br/wp-content/uploads/2021/11/Attack-on-Titan-4-GQCA-img-qSKtAl-847x1200.jpeg"
-        
         },
         {
             ID: 4,
@@ -35,7 +34,6 @@ export default function Oferta(){
             cor: "colorido",
             capitulo: 386,
             imagem: "https://www.google.com/url?sa=i&url=https%3A%2F%2Feditorajbc.com.br%2Fmangas%2Fcolecao%2Fmy-hero-academia%2F&psig=AOvVaw1MRkwGQxQzBpSziMR88xf1&ust=1724806066729000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjy8735k4gDFQAAAAAdAAAAABAE"
-    
         },
         {
             ID: 5,
@@ -44,7 +42,6 @@ export default function Oferta(){
             cor: "colorido",
             capitulo: 205,
             imagem: "https://mangalivre.com.br/wp-content/uploads/2021/02/kimetsu-no-yaiba-segunda-temporada-poster-768x1086-2.jpg"
-    
         },
         {
             ID: 6,
@@ -86,11 +83,12 @@ export default function Oferta(){
             capitulo: 143,
             imagem: "https://imgs.extra.com.br/1508585138/1xg.jpg"
         }
-    ];
-    return(
+    ]);
+
+    return (
         <div>
-        <hi>Minha Oferta</hi>
-        <Cardapio itens={listaOferta}/>
-        </div>
-    )
+            <h1>Minha Oferta</h1>            
+ <Cardapio itens={listaOferta} />      
+   </div>
+    );
 }

@@ -30,11 +30,11 @@ export default function Home() {
         },
             {
                 id: 3,
-                nome: "Attack on Titan",
+                nome: "Hunter x Hunter",
                 preco: 27.90,
                 cor: "colorido",
                 capitulo: 139,
-                imagem: "https://mangalivre.com.br/wp-content/uploads/2021/11/Attack-on-Titan-4-GQCA-img-qSKtAl-847x1200.jpeg"
+                imagem: "https://jumpg-assets.tokyo-cdn.com/secure/title/100015/title_thumbnail_portrait_list/314380.jpg?hash=MKFL2hpxoFsBEp_KgADJpg&expires=2145884400"
             },
         {
             id: 5,
