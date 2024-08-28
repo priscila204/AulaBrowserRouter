@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Cardapio from '../Componentes/listarProdutos';
-
+import Header from '../Componentes/Header';
+import Footer from '../Componentes/footer';
 export default function Home() { 
 
     const [listaMangas, setMangas] = useState([
@@ -48,9 +49,10 @@ export default function Home() {
 
     return (
         <div>
-            
+            <Header />
             <h1>Minha Loja Virtual</h1>
             <Cardapio itens={listaMangas} />
+            <Footer />
         </div>
     );
 }

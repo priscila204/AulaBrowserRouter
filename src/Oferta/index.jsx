@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cardapio from "../Componentes/listarProdutos";
-
+import Header from "../Componentes/Header";
+import Footer from '../Componentes/footer';
 export default function Oferta() { 
     const [listaOferta, setOferta] = useState([
         {
@@ -87,8 +88,10 @@ export default function Oferta() {
 
     return (
         <div>
+            <Header />
             <h1>Minha Oferta</h1>            
- <Cardapio itens={listaOferta} />      
+ <Cardapio itens={listaOferta} /> 
+ <Footer />     
    </div>
     );
 }

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Cardapio from '../Componentes/listarProdutos';
+import Header from '../Componentes/Header';
+import Footer from '../Componentes/footer';
+
 export default function Produtos() {
     const [listaProdutos, setProdutos] = useState([
         {
@@ -126,8 +129,10 @@ export default function Produtos() {
 
     return (
         <div>
-            <h1>Minha Loja Virtual</h1>
+            <Header />
+            <h1>Meus Produtos</h1>
             <Cardapio itens={listaProdutos} />
+            <Footer />
         </div>
     );
 }

@@ -34,11 +34,14 @@ export default function Cardapio({ itens }) {
                     </div>
                 ))}
             </div>
+            <h1>Lista de Desejos</h1>
             <div className="order-list">
                 {listaPedidos.map((produto) => (
                     <div key={produto.id} className="order-card">
                         <p>{produto.nome}</p>
                         <p>R$ {produto.preco}</p>
+                        <p>Cor : {produto.cor}</p>
+                        <p>Capitulos : {produto.capitulo}</p>
                         <button onClick={() => removerPedido(produto.id)} className="remove-button">Remover</button>
                     </div>
                 ))}
